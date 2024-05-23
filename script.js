@@ -13,10 +13,10 @@ function toggleMode() {
     
     if (body.classList.contains('light')){
         img.setAttribute('src', './assets/avatar-light.png')
-        img.setAttribute('alt', 'imageprofileLight')
+      
     } else {
         img.setAttribute ('src', './assets/avatar.png')
-        img.setAttribute ('alt', 'imageprofileDark')    }
+    }
     
   
 
