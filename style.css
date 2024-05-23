@@ -72,15 +72,18 @@ margin-top: 8px;
 }
 
 #switcher button {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: white var(--switch-url) no-repeat center;
-  
+width: 32px;
+height: 32px;
+border-radius: 50%;
+background: white var(--switch-url) no-repeat center;
+
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
   z-index: 1;
+  text-align: center;
+  animation: slide-off 0.3s ;
+  
 }
 
 #switcher li {
@@ -91,14 +94,14 @@ margin-top: 8px;
   border-radius: 100px;
   backdrop-filter: blur(4px);
   list-style: none; 
+  
 
 }
 
 .light #switcher button {
-right: 0;
-left: initial;
+  animation: slide-in 0.3s forwards;
+  
 }
-
 
 ul {
   display: flex;
@@ -170,4 +173,25 @@ footer{
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
+
+/*animação em css */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-off {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
 
